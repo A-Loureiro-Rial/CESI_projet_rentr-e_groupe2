@@ -3,7 +3,7 @@
 
 class Article
 {
-    public const INDEXES = ['a_id', 'a_title', 'a_content', 'a_views', 'a_likes', 'a_dislikes', 'a_author', 'a_status', 'a_created_at', 'a_updated_at'];
+    public const INDEXES = ['a_title', 'a_content', 'a_views', 'a_likes', 'a_dislikes', 'a_author', 'a_status'];
     public const DEFAULT = ['a_id', 'a_views', 'a_likes', 'a_dislikes', 'a_created_at', 'a_updated_at'];
     public $a_id;
     public $a_title;
@@ -23,7 +23,7 @@ class Article
             foreach($table as $column => $value)
             {
                 {
-                    if (property_exists($this, $column) && !in_array($column,$this->DEFAULT));
+                    if (property_exists($this, $column) && !in_array($column, self::DEFAULT));
                     {
                         $this->$column =  htmlspecialchars(strip_tags(trim($value)));
                     }

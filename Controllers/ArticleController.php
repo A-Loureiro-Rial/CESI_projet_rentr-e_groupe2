@@ -1,6 +1,5 @@
 <?php
 require('../Models/Article.php');
-require('DB.php');
 
 class ArticleController
 {
@@ -8,7 +7,7 @@ class ArticleController
     {
         try
         {
-            DB::insert('articles', Article::INDEXES, $article->get_values);
+            DB::insert('articles', Article::INDEXES, $article->get_values());
         }
         catch (Exception $e)
         {
@@ -22,11 +21,7 @@ class ArticleController
         {
             if (property_exists(Article::class, $index))
             {
-                if (gettype($article->$index != 'int'))
-                {
-                    throw new Exception('invalid index');
-                }
-                DB::update('articles', [$index], $article->$index + 1, 'WHERE a_id=' . $article->a_id);
+                DB::update('articles', [$index], [$article->$index + 1], 'WHERE a_id=' . $article->a_id);
             }
             else
             {
@@ -35,7 +30,7 @@ class ArticleController
         }
         catch (Exception $e)
         {
-            return $e;
+            echo $e;
         }
     }
 
@@ -61,7 +56,7 @@ class ArticleController
         }
         catch (Exception $e)
         {
-            return $e;
+            echo $e;
         }
     }
 
@@ -77,3 +72,6 @@ class ArticleController
         }
     }
 }
+
+$article = Article::findById(1);
+ArticleController::add_one($article, 'a_views');

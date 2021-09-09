@@ -19,11 +19,15 @@ class DB
             {
                 throw new Exception('Invalid parameters');
             }
-            $stmt = self::getDBInstance()->prepare('INSERT INTO ' . $table . ' ('. implode(', ', $indexes) . ') VALUES (:' . implode(', ', $values) . ');');
+            $stmt = self::getDBInstance()->prepare('INSERT INTO ' . $table . ' ('. implode(', ', $indexes) . ') VALUES (:' . implode(', :', $indexes) . ');');
             $length = count($indexes);
             for ($i = 0; $i < $length; $i++)
             {
-                $stmt->bindParam(':' . $indexes[$i], $values[$i]);
+                if ($indexes[$i] != 'a_id')
+                {
+                    echo 'je binde :' . $indexes[$i] . ' qui vaut ->' . $values[$i].PHP_EOL;
+                    $stmt->bindParam(':' . $indexes[$i], $values[$i]);
+                }
             }
             $stmt->execute();
         }
@@ -47,8 +51,10 @@ class DB
             {
                 $query .= $i == 0 ? $indexes[$i] . '=:' . $indexes[$i] : ', ' . $indexes[$i] . '=:' . $indexes[$i];
             }
-            $query .= $condition == '' ? '' : ' WHERE ' . $condition;
+            $query .= ' ' . $condition;
             $query .= ';';
+            
+
             $stmt = self::getDBInstance()->prepare($query);
             for ($i = 0; $i < $length; $i++)
             {
@@ -58,7 +64,7 @@ class DB
         }
         catch (Exception $e)
         {
-            return $e;
+            echo $e;
         }
     }
 
@@ -70,7 +76,7 @@ class DB
             {
                 throw new Exception('Invalid Parameters');
             }
-            $stmt = self::getDBInstance()->prepare('DELETE FROM ' . $table . 'WHERE ' . $condition . ';');
+            $stmt = self::getDBInstance()->prepare('DELETE FROM ' . $table . ' WHERE ' . $condition . ';');
             $stmt->execute();
         }
         catch (Exception $e)
