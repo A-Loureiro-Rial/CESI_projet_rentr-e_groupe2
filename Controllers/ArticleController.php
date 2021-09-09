@@ -42,7 +42,7 @@ class ArticleController
             $values = [];
             foreach ($modify as $key => $value)
             {
-                if (property_exists(Article::class, $key))
+                if (property_exists(Article::class, $key) && !in_array($key, Article::DEFAULT))
                 {
                     $indexes[] = $key;
                     $values[] = htmlspecialchars(strip_tags(trim($value)));
@@ -52,6 +52,8 @@ class ArticleController
                     throw new Exception('Invalid property');
                 }
             }
+            $indexes[] = 'a_updated_at';
+            $values[] = date("Y-m-d H:i:s");
             DB::update('articles', $indexes, $values, 'WHERE a_id=' . $article->a_id);    
         }
         catch (Exception $e)
