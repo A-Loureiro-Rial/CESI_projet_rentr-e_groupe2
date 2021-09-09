@@ -1,0 +1,353 @@
+.LogoHeader{
+    width: 17%;
+    height: 17%;
+}
+
+.NavMenu{
+    background-color: #18a390;
+    color: white;
+}
+
+.searchbutton{
+    color: white;
+    border-color: #fefefe;
+
+}
+
+.searchbutton:hover {
+  color:#18a390;
+  border-color: #282520;
+  background-color: #fefefe;
+}
+
+.hyperlien{
+    color:white;
+  }
+
+.hyperlien:hover{
+    color:#282520;;
+  }
+
+h1.title{
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size:large;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-content{
+    margin: auto;
+    max-width: 74%;
+}
+
+.carousel-title{
+    font-size: medium;
+    font-weight: bold;
+}
+
+.test{
+    background-color:#18a390;
+}
+
+/*.menu{
+    background-color:#282520;
+    color: #18a390;
+}*/
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color:#18a390;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+
+  img.avatar {
+    width: 30%;
+  }
+
+/*Footer*/
+.footer {
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    .footer {
+      text-align: inherit;
+    }
+  }
+  
+  body:not(.front) .footer {
+    margin-top: 7rem;
+  }
+  
+  .footer-links {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #ffffff;
+    background-color:#18a390;
+  }
+  .footer-links .list-unstyled {
+    margin-bottom: 2.5rem;
+  }
+  .footer-links .list-unstyled a {
+    color: #ffffff;
+  }
+  .footer-links address {
+    margin-bottom: 2.5rem;
+  }
+  
+  .footer-heading {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: 3.5rem;
+    font-weight: 600;
+  }
+  @media (min-width: 992px) {
+    .footer-heading {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+  
+  .footer-logo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 180px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .footer-headline {
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 3.5rem;
+  }
+  @media (min-width: 992px) {
+    .footer-headline {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+  
+  .footer-text {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  @media (max-width: 1199px) {
+    .footer .footer-btn {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  @media (max-width: 991px) {
+    .footer .footer-btn {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  .footer-notes {
+    background-color: #dcdddf;
+    color: #464a4c;
+  }
+  .footer-notes .list-inline {
+    margin-bottom: 0;
+    padding: 1rem 0;
+  }
+  .footer-notes .list-inline-item span,
+  .footer-notes .list-inline-item a {
+    padding: 1rem;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+  .footer-notes .list-inline-item a {
+    position: relative;
+    color: #464a4c;
+  }
+  .footer-notes .list-inline-item:not(:first-child) a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 15%;
+    width: 1px;
+    height: 70%;
+    background-color: #000000;
+  }
+  .footer-notes .list-inline-item:not(:last-child) {
+    margin-right: 0;
+  }
+  @media (max-width: 767px) {
+    .footer-notes .list-inline-item:first-child {
+      display: block;
+    }
+    .footer-notes .list-inline-item:nth-child(2) a:before {
+      display: none;
+    }
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+  }
+  @media (min-width: 768px) {
+    .social-links {
+      justify-content: flex-end;
+      padding-top: .5rem;
+    }
+  }
+  .social-links p {
+    margin-bottom: 0;
+    margin-right: .5rem;
+    font-style: italic;
+  }
+  .social-links .social-icon {
+    display: block;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    max-width: 32px;
+    max-height: 24px;
+    transition: fill 0.35s ease-out;
+  }
+  .social-links .social-icon:focus, .social-links .social-icon:active, .social-links .social-icon:hover {
+    fill:#18a390;
+  }
+  .social-links .svg-icon-linkedin-dims {
+    max-height: 18px !important;
+  }
+  
+  .footer-notes .col-md-4,
+  .footer-notes .col-md-8 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .social{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .social img {
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+  }
+  .fond_twi, .fond_insta, .fond_youtube, .fond_TPZ{
+    top: -40px;
+    z-index: 1;
+    display: block;
+    height: 40px;
+    width: 40px;
+    background-color: #55acee;
+    position: absolute;
+    transition: 0.5s;
+  }
+  .fond_insta{
+    background-color: purple;
+    }
+  .fond_youtube{
+      background-color: red;
+    }
+  
+  .fond_TPZ{
+      background-color:#18a390;
+    }
+  
+  .social:hover .fond_twi{
+    top: 0;
+  }
+  .social:hover .fond_insta{
+    top: 0;
+  }
+  .social:hover .fond_youtube{
+    top: 0;
+  }
+  
+  .social:hover .fond_TPZ{
+    top: 0;
+  }
+  
+  .conteneurA{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0px;
+  }
+  
+  /* Add a black background color to the top navigation */
+  .topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+/*Fin Footer*/
