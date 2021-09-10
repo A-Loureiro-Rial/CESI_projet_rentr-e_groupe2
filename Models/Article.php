@@ -107,7 +107,7 @@ class Article
         $article = DB::select('articles', '*', 'WHERE a_id=' . $a_id);
         if (count($article) == 0)
         {
-            throw new Exception('invalid id');
+            return NULL;
         }
         else
         {
