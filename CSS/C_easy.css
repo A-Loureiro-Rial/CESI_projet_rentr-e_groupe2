@@ -3,6 +3,11 @@
     height: 17%;
 }
 
+.footer-banner{
+  visibility: inherit;
+  opacity: 1;
+}
+
 .NavMenu{
     background-color: #18a390;
     color: white;
