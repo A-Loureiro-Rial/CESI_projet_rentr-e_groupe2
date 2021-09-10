@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang='fr'>
-<?php require "../HTML/Header.php"?>     
+<?php require "../HTML/Header.php"?>
 <body>
     <br/>
     <h1 class="title">Articles à la une</h1>

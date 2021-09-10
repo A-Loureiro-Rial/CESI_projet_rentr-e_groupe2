@@ -1,5 +1,4 @@
 <?php 
-require('../Models/Comment.php');
 
 class CommentController
 {

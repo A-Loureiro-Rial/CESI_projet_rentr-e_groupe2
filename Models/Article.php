@@ -1,5 +1,4 @@
 <?php
-    require('../Controllers/DB.php');
 
 class Article
 {

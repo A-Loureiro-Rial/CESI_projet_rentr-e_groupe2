@@ -1,5 +1,4 @@
 <?php
-require('../Models/Article.php');
 
 class ArticleController
 {

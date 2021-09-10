@@ -1,5 +1,4 @@
 <?php
-require '../env.php';
 
 class DB
 {

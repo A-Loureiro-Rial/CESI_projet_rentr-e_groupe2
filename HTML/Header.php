@@ -8,10 +8,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../CSS/C_easy.css">
-    <?php require("../Models/Article.php");
-          require("../Models/Category.php");
-          require("../Models/Comment.php");
-          require("../Models/User.php");
+    <?php 
+        require_once '../env.php';
           $article = Article::findById(1);
           $article2 = Article::findById(2);
           $article3 = Article::findById(3);
