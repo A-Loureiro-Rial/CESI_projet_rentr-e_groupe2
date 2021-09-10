@@ -48,18 +48,22 @@
             
             <h6 class="card-subtitle text-muted">Vu <?=$article->a_views?> fois</h6>
             <div class="d-flex">
-                <form action="Read.php?a_id=<?=$article->a_id?>" method="post" class="mx-2">
+                <form action="Read.php?a_id=<?=$article->a_id?>" method="post" class="mx-2 my-1">
                     <input type="hidden" name="like" value=1>
-                    <input type="submit" value="<?=$article->a_likes?> 👍">
+                    <input type="submit" class="btn btn-secondary" value="<?=$article->a_likes?> 👍">
                 </form>
-                <form action="Read.php?a_id=<?=$article->a_id?>" method="post">
+                <form action="Read.php?a_id=<?=$article->a_id?>" method="post" class="my-1">
                     <input type="hidden" name="dislike" value=1>
-                    <input type="submit" value="<?=$article->a_dislikes?> 👎">
+                    <input type="submit" class="btn btn-secondary" value="<?=$article->a_dislikes?> 👎">
                 </form>
             </div>
-            
-            <a href="UpdateArticle.php?a_id=<?=$article->a_id?>" class="card-link">Modifier</a>
-            <a href="#!" class="card-link">Supprimer</a>
+            <div class="d-flex my-2">
+                <a href="UpdateArticle.php?a_id=<?=$article->a_id?>" class="btn btn-secondary mx-2">Modifier</a>
+                <form action="Delete.php" method="post">
+                    <input type="hidden" name="a_id" value="<?=$article->a_id?>">
+                    <input type="submit"class="btn btn-secondary" value="Supprimer">
+                </form>
+            </div>
         </div>
 <?php
     }
