@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang='fr'>
 <?php require "../HTML/Header.php"?>
+<?php 
+        require_once '../env.php';
+          $article = Article::findById(1);
+          $article2 = Article::findById(2);
+          $article3 = Article::findById(3);
+          
+    ?>
 <body>
     <br/>
     <h1 class="title">Articles à la une</h1>
@@ -34,6 +41,7 @@
         <span class="sr-only">Next</span>
         </a>
     </div>
+
     <!--FOOTER-->
     <?php require "../HTML/Footer.php"?> 
 </body>

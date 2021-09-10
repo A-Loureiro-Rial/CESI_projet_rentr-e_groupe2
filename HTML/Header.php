@@ -8,11 +8,15 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../CSS/C_easy.css">
-    <?php 
+    <?php
         require_once '../env.php';
-          $article = Article::findById(1);
-          $article2 = Article::findById(2);
-          $article3 = Article::findById(3);
+        $articleliste = Article::list();
+        foreach ($articleliste as $tmp)
+        {
+?>
+            <input type="hidden" id="article<?=$tmp->a_id?>" value="<?=$tmp->a_title?>">
+<?php
+        }
     ?>
 </head>
 <header>
@@ -55,9 +59,6 @@
     <nav class="navbar navbar-expand-lg navbar sticky-top NavMenu">
         <div class="">
             <a class="navbar-brand">Menu</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
         </div>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">

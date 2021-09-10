@@ -1,14 +1,11 @@
-<footer id="Footer" class="footer fixed-bottom" role="contentinfo">
-        <div class="footer-links">
-            <div class="container" style="visibility: inherit; opacity: 1;">
-                <div class="row">
-                    <div class="col-md-6 col-lg-3">
-                    </div>
-                </div>
+<footer id="Footer" class="footer sticky-bottom" role="contentinfo">
+        <div class="footer-links ">
+            <div class="container footer-banner ">
+            
             </div>
         </div>
         <div class="footer-notes">
-            <div class="container" style="visibility: inherit; opacity: 1;">
+            <div class="container footer-banner">
                 <div class="row">
                     <div class="col-md-8">
                         
