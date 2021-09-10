@@ -18,7 +18,7 @@
 <header>
     <!--Barre Logo-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><img class="LogoHeader" src="../Images/LogoBlog/C_EasyLogoBig.png" alt="LogoC_easy"></a>
+    <a class="navbar-brand" href="index.php"><img class="LogoHeader" src="../Images/LogoBlog/C_EasyLogoBig.png" alt="LogoC_easy"></a>
     <!--button id="SeConnecter" class="btn btn-spazio login telespazio-right" title="Se Connecter" onclick="document.getElementById('id01').style.display='block'">Se Connecter</button--> 
 
             <!--Pop Up Connexion--
