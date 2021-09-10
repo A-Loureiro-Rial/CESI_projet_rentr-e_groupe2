@@ -13,6 +13,8 @@
           require("../Models/Comment.php");
           require("../Models/User.php");
           $article = Article::findById(1);
+          $article2 = Article::findById(2);
+          $article3 = Article::findById(3);
     ?>
 </head>
 <header>
@@ -78,4 +80,4 @@
             </form>
         </div>
     </nav>
-</header>     
+</header>
