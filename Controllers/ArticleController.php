@@ -74,6 +74,3 @@ class ArticleController
         }
     }
 }
-
-$article = Article::findById(1);
-ArticleController::add_one($article, 'a_views');
