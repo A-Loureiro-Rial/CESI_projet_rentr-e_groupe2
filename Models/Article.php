@@ -82,9 +82,37 @@ class Article
         }
     }
 
+    public static function findLast()
+    {
+        try
+        {
+            $last = DB::select('articles', '*', "ORDER BY a_created_at DESC LIMIT 1");
+            if (count($last) == 0)
+            {
+                throw new Exception('No article found');
+            }
+            else
+            {
+                return self::fill($last[0]);
+            }
+        }
+        catch (Exception $e)
+        {
+            return $e;
+        }
+    }
+
     public static function findById($a_id)
     {
-        $article = DB::select('articles', '*', 'WHERE a_id=' . $a_id)[0];
-        return self::fill($article);
+        $article = DB::select('articles', '*', 'WHERE a_id=' . $a_id);
+        if (count($article) == 0)
+        {
+            throw new Exception('invalid id');
+        }
+        else
+        {
+            $article = $article[0];
+            return self::fill($article);
+        }
     }
 }
