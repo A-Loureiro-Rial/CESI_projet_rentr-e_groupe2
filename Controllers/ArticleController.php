@@ -21,6 +21,7 @@ class ArticleController
             if (property_exists(Article::class, $index))
             {
                 DB::update('articles', [$index], [$article->$index + 1], 'WHERE a_id=' . $article->a_id);
+                $article->a_views++;
             }
             else
             {

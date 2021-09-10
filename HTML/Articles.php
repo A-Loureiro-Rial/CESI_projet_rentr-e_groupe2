@@ -17,9 +17,9 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title"><?=$article->a_title?></h4>
-                <h6 class="card-subtitle mb-2 text-muted">An article by <?=$article->a_author?></h6>
-                <a href="Read.php/a_id=<?=$article->a_id?>" class="card-link">Lire</a>
-                <a href="#!" class="card-link">Modifier</a>
+                <h6 class="card-subtitle mb-2 text-muted">Un article de <?=$article->a_author?></h6>
+                <a href="Read.php?a_id=<?=$article->a_id?>" class="card-link">Lire</a>
+                <a href="UpdateArticle.php?a_id=<?=$article->a_id?>" class="card-link">Modifier</a>
             </div>
         </div>
 <?php
