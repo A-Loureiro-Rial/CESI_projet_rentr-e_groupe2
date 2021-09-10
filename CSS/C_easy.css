@@ -37,9 +37,26 @@ h1.title{
     margin-right: auto;
 }
 
+.carousel-title{
+    margin: auto;
+    max-width: 74%;
+    text-align:justify;
+    background-color: #18a390;
+    color: #fefefe;
+    border:#18a390 solid 1px;
+    padding-left: 1%;
+}
+
 .carousel-content{
     margin: auto;
     max-width: 74%;
+    text-align:justify;
+    border:#18a390 solid 1px;
+    padding: 1%;
+}
+
+.carousel-box{
+  height: 225px;
 }
 
 .carousel-title{
@@ -47,8 +64,9 @@ h1.title{
     font-weight: bold;
 }
 
-.test{
+.carousel-button{
     background-color:#18a390;
+    border-radius: 5%;
 }
 
 /*.menu{
